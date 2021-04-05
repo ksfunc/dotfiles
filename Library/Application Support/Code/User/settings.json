@@ -19,5 +19,6 @@
     "**/.metals": true,
     "**/.ammonite": true
   },
-  "code-runner.runInTerminal": true
+  "code-runner.runInTerminal": true,
+  "vsnotes.defaultNotePath": "~/Documents/VSNotes"
 }
