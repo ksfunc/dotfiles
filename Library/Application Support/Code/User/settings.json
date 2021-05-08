@@ -1,8 +1,8 @@
 {
+  "workbench.startupEditor": "newUntitledFile",
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "workbench.startupEditor": "newUntitledFile",
   "editor.tabSize": 2,
   "editor.cursorStyle": "block",
   "editor.minimap.enabled": false,
@@ -19,6 +19,14 @@
     "**/.metals": true,
     "**/.ammonite": true
   },
+  "[ruby]": {
+    "editor.defaultFormatter": "rebornix.ruby"
+  },
+  "ruby.useLanguageServer": true,
+  "ruby.lint": {
+    "rubocop": true
+  },
+  "ruby.format": "rufo",
   "code-runner.runInTerminal": true,
   "vsnotes.defaultNotePath": "~/Documents/VSNotes"
 }

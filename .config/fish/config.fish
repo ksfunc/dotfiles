@@ -1,1 +1,0 @@
-set PATH $TO_FISH_PATH $PATH
