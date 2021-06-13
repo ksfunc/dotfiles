@@ -1,6 +1,9 @@
 export JAVA_HOME="$(/usr/libexec/java_home)"
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 
+export SPARK_HOME="/usr/local/Cellar/apache-spark/3.1.2/libexec/"
+export PATH="$SPARK_HOME:$PATH"
+
 if type "anyenv" > /dev/null 2>&1; then
   export ANYENV_ROOT="$HOME/.anyenv"
   export PATH="$ANYENV_ROOT/bin:$PATH"
@@ -33,7 +36,7 @@ zstyle ":vcs_info:*" formats ":%F{green}%c%u%b%f"
 zstyle ":vcs_info:*" actionformats ":%b:%a"
 precmd() { vcs_info }
 
-PROMPT='%n@%m:%F{cyan}%c%f$vcs_info_msg_0_ %# '
+PROMPT="%n@%m:%F{cyan}%c%f$vcs_info_msg_0_ %# "
 
 setopt share_history
 setopt hist_ignore_all_dups
