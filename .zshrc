@@ -1,4 +1,3 @@
-export JAVA_HOME="$(/usr/libexec/java_home)"
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
 
 export SPARK_HOME="/usr/local/Cellar/apache-spark/3.1.2/libexec/"
