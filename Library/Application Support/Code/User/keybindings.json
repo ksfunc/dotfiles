@@ -64,6 +64,20 @@
     "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
   },
   {
+    "key": "ctrl+alt+[Semicolon]",
+    "command": "editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+[Semicolon]",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "editor.action.commentLine",
+      "interval": 100
+    },
+    "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
+  },
+  {
     "key": "shift+alt+i",
     "command": "sticky-selection.exitStickySelectionMode",
     "args": {
@@ -71,6 +85,25 @@
       "interval": 100
     },
     "when": "editorTextFocus && inStickySelectionMode"
+  },
+  {
+    "key": "ctrl+alt+e",
+    "command": "editor.action.insertCursorAtEndOfEachLineSelected",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+alt+e",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "editor.action.insertCursorAtEndOfEachLineSelected",
+      "interval": 100
+    },
+    "when": "editorTextFocus && inStickySelectionMode"
+  },
+  {
+    "key": "ctrl+alt+d",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
   },
   {
     "key": "ctrl+alt+n",
@@ -111,6 +144,16 @@
     "key": "alt+space",
     "command": "editor.action.smartSelect.shrink",
     "when": "editorTextFocus && inStickySelectionMode"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+m",
+    "command": "editor.action.showContextMenu",
+    "when": "textInputFocus"
   },
   {
     "key": "ctrl+alt+f",

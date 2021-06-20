@@ -249,27 +249,6 @@
       ]
     },
     {
-      "description": "Change option+; to command+/",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "semicolon",
-            "modifiers": {
-              "mandatory": ["option"],
-              "optional": ["caps_lock"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "slash",
-              "modifiers": ["command"]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "description": "Change control+f to right_arrow",
       "manipulators": [
         {
@@ -392,12 +371,12 @@
       ]
     },
     {
-      "description": "Change control+v to page_down",
+      "description": "Change control+. to page_down",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "v",
+            "key_code": "period",
             "modifiers": {
               "mandatory": ["control"],
               "optional": ["caps_lock", "shift"]
@@ -412,14 +391,14 @@
       ]
     },
     {
-      "description": "Change option+v to page_up",
+      "description": "Change control+, to page_up",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "v",
+            "key_code": "comma",
             "modifiers": {
-              "mandatory": ["option"],
+              "mandatory": ["control"],
               "optional": ["caps_lock", "shift"]
             }
           },
@@ -432,15 +411,15 @@
       ]
     },
     {
-      "description": "Change option+> to command+down_arrow",
+      "description": "Change option+. to command+down_arrow",
       "manipulators": [
         {
           "type": "basic",
           "from": {
             "key_code": "period",
             "modifiers": {
-              "mandatory": ["option", "shift"],
-              "optional": ["caps_lock"]
+              "mandatory": ["option"],
+              "optional": ["caps_lock", "shift"]
             }
           },
           "to": [
@@ -453,15 +432,15 @@
       ]
     },
     {
-      "description": "Change option+< to command+up_arrow",
+      "description": "Change option+, to command+up_arrow",
       "manipulators": [
         {
           "type": "basic",
           "from": {
             "key_code": "comma",
             "modifiers": {
-              "mandatory": ["option", "shift"],
-              "optional": ["caps_lock"]
+              "mandatory": ["option"],
+              "optional": ["caps_lock", "shift"]
             }
           },
           "to": [
