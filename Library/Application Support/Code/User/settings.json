@@ -19,6 +19,17 @@
     "**/.metals": true,
     "**/.ammonite": true
   },
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
   "[ruby]": {
     "editor.defaultFormatter": "rebornix.ruby"
   },
