@@ -1,19 +1,19 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
   {
-    "key": "backspace",
+    "key": "delete",
     "command": "sticky-selection.exitStickySelectionMode",
     "args": {
-      "command": "deleteLeft",
+      "command": "deleteRight",
       "interval": 100
     },
     "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
   },
   {
-    "key": "delete",
+    "key": "backspace",
     "command": "sticky-selection.exitStickySelectionMode",
     "args": {
-      "command": "deleteRight",
+      "command": "deleteLeft",
       "interval": 100
     },
     "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
@@ -78,13 +78,9 @@
     "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
   },
   {
-    "key": "shift+alt+i",
-    "command": "sticky-selection.exitStickySelectionMode",
-    "args": {
-      "command": "editor.action.insertCursorAtEndOfEachLineSelected",
-      "interval": 100
-    },
-    "when": "editorTextFocus && inStickySelectionMode"
+    "key": "ctrl+alt+d",
+    "command": "editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
   },
   {
     "key": "ctrl+alt+e",
@@ -101,59 +97,9 @@
     "when": "editorTextFocus && inStickySelectionMode"
   },
   {
-    "key": "ctrl+alt+d",
-    "command": "editor.action.addSelectionToNextFindMatch",
-    "when": "editorFocus"
-  },
-  {
-    "key": "ctrl+alt+n",
-    "command": "editor.action.marker.nextInFiles",
-    "when": "editorFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+alt+p",
-    "command": "editor.action.marker.prevInFiles",
-    "when": "editorFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+alt+i",
-    "command": "editor.action.triggerSuggest",
-    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+space",
-    "command": "-editor.action.triggerSuggest",
-    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+alt+i",
-    "command": "toggleSuggestionDetails",
-    "when": "suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "key": "ctrl+space",
-    "command": "-toggleSuggestionDetails",
-    "when": "suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "key": "ctrl+space",
-    "command": "editor.action.smartSelect.expand",
-    "when": "editorTextFocus && inStickySelectionMode"
-  },
-  {
-    "key": "alt+space",
-    "command": "editor.action.smartSelect.shrink",
-    "when": "editorTextFocus && inStickySelectionMode"
-  },
-  {
-    "key": "ctrl+alt+j",
-    "command": "editor.action.quickFix",
-    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
-  },
-  {
-    "key": "ctrl+alt+m",
-    "command": "editor.action.showContextMenu",
-    "when": "textInputFocus"
+    "key": "shift+alt+i",
+    "command": "-editor.action.insertCursorAtEndOfEachLineSelected",
+    "when": "editorTextFocus"
   },
   {
     "key": "ctrl+alt+f",
@@ -204,5 +150,55 @@
     "key": "shift+alt+f",
     "command": "-filesExplorer.findInFolder",
     "when": "explorerResourceIsFolder && explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+alt+i",
+    "command": "editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "-editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+i",
+    "command": "toggleSuggestionDetails",
+    "when": "suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "-toggleSuggestionDetails",
+    "when": "suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+space",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus && inStickySelectionMode"
+  },
+  {
+    "key": "alt+space",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "editorTextFocus && inStickySelectionMode"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "editor.action.quickFix",
+    "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+m",
+    "command": "editor.action.showContextMenu",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "editor.action.marker.nextInFiles",
+    "when": "editorFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+alt+p",
+    "command": "editor.action.marker.prevInFiles",
+    "when": "editorFocus && !editorReadonly"
   }
 ]
