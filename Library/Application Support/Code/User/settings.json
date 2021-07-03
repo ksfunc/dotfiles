@@ -3,41 +3,42 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "editor.tabSize": 2,
-  "editor.cursorStyle": "block",
-  "editor.minimap.enabled": false,
-  "editor.renderWhitespace": "all",
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "[scala]": {
-    "editor.defaultFormatter": "scalameta.metals"
-  },
-  "files.watcherExclude": {
-    "**/.bloop": true,
-    "**/.metals": true,
-    "**/.ammonite": true
-  },
-  "[java]": {
-    "editor.defaultFormatter": "redhat.java"
-  },
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
     "**/.settings": true,
     "**/.factorypath": true
   },
+  "files.watcherExclude": {
+    "**/.bloop": true,
+    "**/.metals": true,
+    "**/.ammonite": true
+  },
+  "editor.tabSize": 2,
+  "editor.cursorStyle": "block",
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.suggestSelection": "first",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[scala]": {
+    "editor.defaultFormatter": "scalameta.metals"
+  },
   "[ruby]": {
     "editor.defaultFormatter": "rebornix.ruby"
   },
   "ruby.useLanguageServer": true,
+  "ruby.intellisense": "rubyLocate",
+  "ruby.format": "rubocop",
   "ruby.lint": {
     "rubocop": true
   },
-  "ruby.format": "rubocop",
   "code-runner.runInTerminal": true,
   "vsnotes.defaultNotePath": "~/Documents/VSNotes"
 }
