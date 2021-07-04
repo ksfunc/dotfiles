@@ -30,6 +30,9 @@
   "[scala]": {
     "editor.defaultFormatter": "scalameta.metals"
   },
+  "[elixir]": {
+    "editor.defaultFormatter": "JakeBecker.elixir-ls"
+  },
   "[ruby]": {
     "editor.defaultFormatter": "rebornix.ruby"
   },

@@ -9,6 +9,10 @@ if type "anyenv" > /dev/null 2>&1; then
   eval "$(anyenv init -)"
 fi
 
+if type "asdf" > /dev/null 2>&1; then
+  . "$(brew --prefix asdf)/asdf.sh"
+fi
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "~/google-cloud-sdk/path.zsh.inc" ]; then
   . "~/google-cloud-sdk/path.zsh.inc"
