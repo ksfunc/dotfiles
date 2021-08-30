@@ -10,10 +10,46 @@
     "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
   },
   {
+    "key": "ctrl+d",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "deleteRight",
+      "interval": 100
+    },
+    "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
+  },
+  {
+    "key": "alt+delete",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "deleteWordRight",
+      "interval": 100
+    },
+    "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
+  },
+  {
     "key": "backspace",
     "command": "sticky-selection.exitStickySelectionMode",
     "args": {
       "command": "deleteLeft",
+      "interval": 100
+    },
+    "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
+  },
+  {
+    "key": "ctrl+h",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "deleteLeft",
+      "interval": 100
+    },
+    "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
+  },
+  {
+    "key": "alt+backspace",
+    "command": "sticky-selection.exitStickySelectionMode",
+    "args": {
+      "command": "deleteWordLeft",
       "interval": 100
     },
     "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
@@ -25,7 +61,7 @@
       "command": "deleteAllRight",
       "interval": 100
     },
-    "when": "textInputFocus && !editorReadonly && inStickySelectionMode"
+    "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
   },
   {
     "key": "cmd+x",
@@ -64,12 +100,12 @@
     "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
   },
   {
-    "key": "ctrl+alt+[Semicolon]",
+    "key": "ctrl+[Semicolon]",
     "command": "editor.action.commentLine",
     "when": "editorTextFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+alt+[Semicolon]",
+    "key": "ctrl+[Semicolon]",
     "command": "sticky-selection.exitStickySelectionMode",
     "args": {
       "command": "editor.action.commentLine",
@@ -78,9 +114,23 @@
     "when": "editorTextFocus && !editorReadonly && inStickySelectionMode"
   },
   {
+    "key": "ctrl+alt+k ctrl+alt+d",
+    "command": "editor.action.moveSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
     "key": "ctrl+alt+d",
     "command": "editor.action.addSelectionToNextFindMatch",
     "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+alt+d",
+    "command": "sticky-selection.exitStickySelectionModeWithSelectionKeeped",
+    "args": {
+      "command": "editor.action.addSelectionToNextFindMatch",
+      "interval": 100
+    },
+    "when": "editorTextFocus && inStickySelectionMode"
   },
   {
     "key": "ctrl+alt+e",
@@ -142,16 +192,6 @@
     "when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
   },
   {
-    "key": "ctrl+alt+f",
-    "command": "filesExplorer.findInFolder",
-    "when": "explorerResourceIsFolder && explorerViewletVisible && filesExplorerFocus && !inputFocus"
-  },
-  {
-    "key": "shift+alt+f",
-    "command": "-filesExplorer.findInFolder",
-    "when": "explorerResourceIsFolder && explorerViewletVisible && filesExplorerFocus && !inputFocus"
-  },
-  {
     "key": "ctrl+alt+i",
     "command": "editor.action.triggerSuggest",
     "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
@@ -187,6 +227,11 @@
     "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
   },
   {
+    "key": "ctrl+alt+j",
+    "command": "problems.action.showQuickFixes",
+    "when": "problemFocus"
+  },
+  {
     "key": "ctrl+alt+h",
     "command": "editor.action.triggerParameterHints",
     "when": "editorHasSignatureHelpProvider && editorTextFocus"
@@ -197,23 +242,13 @@
     "when": "editorHasSignatureHelpProvider && editorTextFocus"
   },
   {
-    "key": "ctrl+alt+h",
+    "key": "ctrl+alt+o",
     "command": "editor.action.showHover",
     "when": "editorTextFocus"
   },
   {
-    "key": "cmd+k cmd+i",
-    "command": "-editor.action.showHover",
-    "when": "editorTextFocus"
-  },
-  {
-    "key": "ctrl+alt+h",
+    "key": "ctrl+alt+o",
     "command": "editor.debug.action.showDebugHover",
-    "when": "editorTextFocus && inDebugMode"
-  },
-  {
-    "key": "cmd+k cmd+i",
-    "command": "-editor.debug.action.showDebugHover",
     "when": "editorTextFocus && inDebugMode"
   },
   {
@@ -224,11 +259,11 @@
   {
     "key": "ctrl+alt+n",
     "command": "editor.action.marker.nextInFiles",
-    "when": "editorFocus && !editorReadonly"
+    "when": "editorFocus"
   },
   {
     "key": "ctrl+alt+p",
     "command": "editor.action.marker.prevInFiles",
-    "when": "editorFocus && !editorReadonly"
+    "when": "editorFocus"
   }
 ]

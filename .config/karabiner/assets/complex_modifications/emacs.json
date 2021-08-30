@@ -17,6 +17,16 @@
             {
               "key_code": "delete_or_backspace"
             }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$",
+                "^com\\.googlecode\\.iterm2$",
+                "^com\\.microsoft\\.VSCode$"
+              ]
+            }
           ]
         }
       ]
@@ -36,6 +46,16 @@
           "to": [
             {
               "key_code": "delete_forward"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.apple\\.Terminal$",
+                "^com\\.googlecode\\.iterm2$",
+                "^com\\.microsoft\\.VSCode$"
+              ]
             }
           ]
         }
@@ -104,6 +124,27 @@
       ]
     },
     {
+      "description": "Change option+i to shift+tab",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "i",
+            "modifiers": {
+              "mandatory": ["option"],
+              "optional": ["caps_lock"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": ["shift"]
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "Change control+g to escape",
       "manipulators": [
         {
@@ -138,6 +179,27 @@
           "to": [
             {
               "key_code": "return_or_enter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Change option+m to shift+return_or_enter",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m",
+            "modifiers": {
+              "mandatory": ["option"],
+              "optional": ["caps_lock"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter",
+              "modifiers": ["shift"]
             }
           ]
         }
