@@ -30,6 +30,9 @@
   "[scala]": {
     "editor.defaultFormatter": "scalameta.metals"
   },
+  "[dart]": {
+    "editor.defaultFormatter": "Dart-Code.dart-code"
+  },
   "[elixir]": {
     "editor.defaultFormatter": "JakeBecker.elixir-ls"
   },
