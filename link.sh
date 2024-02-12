@@ -1,6 +1,5 @@
 #!/bin/sh
 
-ln -snf ~/dotfiles/.Brewfile ~/.Brewfile
 ln -snf ~/dotfiles/.zshrc ~/.zshrc
 mkdir -p ~/.config
 ln -snf ~/dotfiles/.config/karabiner ~/.config/karabiner
