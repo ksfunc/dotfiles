@@ -3,6 +3,7 @@
   "editor.cursorStyle": "block",
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
+  "editor.renderControlCharacters": true,
   "editor.suggestSelection": "first",
   "editor.inlineSuggest.enabled": true,
   "editor.inlayHints.enabled": "off",
@@ -14,9 +15,8 @@
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "files.watcherExclude": { "**/.bloop": true, "**/.metals": true, "**/.ammonite": true },
-  "workbench.startupEditor": "newUntitledFile",
-  "terminal.integrated.scrollback": 2000,
+  "workbench.startupEditor": "none",
+  "terminal.integrated.scrollback": 5000,
   "git.autofetch": true,
   "prettier.printWidth": 120,
   "[rust]": { "editor.defaultFormatter": "rust-lang.rust-analyzer" },
@@ -28,6 +28,5 @@
   "[elixir]": { "editor.defaultFormatter": "JakeBecker.elixir-ls" },
   "[terraform]": { "editor.defaultFormatter": "hashicorp.terraform" },
   "[terraform-vars]": { "editor.defaultFormatter": "hashicorp.terraform" },
-  "gitlens.plusFeatures.enabled": false,
-  "vsnotes.defaultNotePath": "~/Documents/VSNotes"
+  "gitlens.plusFeatures.enabled": false
 }

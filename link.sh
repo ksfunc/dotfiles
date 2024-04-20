@@ -1,5 +1,6 @@
 #!/bin/sh
 
+ln -snf ~/dotfiles/.zprofile ~/.zprofile
 ln -snf ~/dotfiles/.zshrc ~/.zshrc
 
 mkdir -p ~/.config

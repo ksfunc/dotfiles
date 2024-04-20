@@ -12,8 +12,6 @@ if [ -f ~/google-cloud-sdk/completion.zsh.inc ]; then
   . ~/google-cloud-sdk/completion.zsh.inc
 fi
 
-export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
-
 setopt share_history
 setopt hist_ignore_space
 setopt hist_ignore_all_dups
