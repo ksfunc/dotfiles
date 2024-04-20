@@ -1,0 +1,11 @@
+[user]
+  # ~/.gitconfig
+[core]
+  editor = code -w
+  ignorecase = false
+[fetch]
+  prune = true
+[pull]
+  ff = only
+[rebase]
+  autostash = true

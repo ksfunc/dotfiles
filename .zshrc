@@ -1,24 +1,18 @@
-if type "anyenv" > /dev/null 2>&1; then
-  export ANYENV_ROOT="$HOME/.anyenv"
-  export PATH="$ANYENV_ROOT/bin:$PATH"
-  eval "$(anyenv init -)"
-fi
-
 if type "asdf" > /dev/null 2>&1; then
   . "$(brew --prefix asdf)/libexec/asdf.sh"
+  . ~/.asdf/plugins/java/set-java-home.zsh
+fi
+
+if [ -f ~/google-cloud-sdk/path.zsh.inc ]; then
+  # The next line updates PATH for the Google Cloud SDK.
+  . ~/google-cloud-sdk/path.zsh.inc
+fi
+if [ -f ~/google-cloud-sdk/completion.zsh.inc ]; then
+  # The next line enables shell command completion for gcloud.
+  . ~/google-cloud-sdk/completion.zsh.inc
 fi
 
 export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then
-  . "$HOME/google-cloud-sdk/path.zsh.inc"
-fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then
-  . "$HOME/google-cloud-sdk/completion.zsh.inc"
-fi
 
 setopt share_history
 setopt hist_ignore_space

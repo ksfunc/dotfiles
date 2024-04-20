@@ -21,11 +21,7 @@
           "conditions": [
             {
               "type": "frontmost_application_unless",
-              "bundle_identifiers": [
-                "^com\\.apple\\.Terminal$",
-                "^com\\.googlecode\\.iterm2$",
-                "^com\\.microsoft\\.VSCode$"
-              ]
+              "bundle_identifiers": ["^com\\.apple\\.Terminal$", "^com\\.microsoft\\.VSCode$"]
             }
           ]
         }
@@ -51,11 +47,7 @@
           "conditions": [
             {
               "type": "frontmost_application_unless",
-              "bundle_identifiers": [
-                "^com\\.apple\\.Terminal$",
-                "^com\\.googlecode\\.iterm2$",
-                "^com\\.microsoft\\.VSCode$"
-              ]
+              "bundle_identifiers": ["^com\\.apple\\.Terminal$", "^com\\.microsoft\\.VSCode$"]
             }
           ]
         }
@@ -509,66 +501,6 @@
             {
               "key_code": "up_arrow",
               "modifiers": ["command"]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "Change control+a to home (Office)",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "a",
-            "modifiers": {
-              "mandatory": ["control"],
-              "optional": ["caps_lock", "shift"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "home"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com\\.microsoft\\.Excel$",
-                "^com\\.microsoft\\.Powerpoint$",
-                "^com\\.microsoft\\.Word$"
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "description": "Change control+e to end (Office)",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "e",
-            "modifiers": {
-              "mandatory": ["control"],
-              "optional": ["caps_lock", "shift"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "end"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "frontmost_application_if",
-              "bundle_identifiers": [
-                "^com\\.microsoft\\.Excel$",
-                "^com\\.microsoft\\.Powerpoint$",
-                "^com\\.microsoft\\.Word$"
-              ]
             }
           ]
         }
