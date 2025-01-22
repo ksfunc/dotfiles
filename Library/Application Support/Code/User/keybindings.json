@@ -92,7 +92,7 @@
   },
   {
     "key": "cmd+d",
-    "command": "sticky-selection.exitStickySelectionModeWhilePreservingSelection",
+    "command": "sticky-selection.exitStickySelectionModePreserving",
     "args": {
       "command": "editor.action.addSelectionToNextFindMatch",
       "delay": 100
@@ -106,7 +106,7 @@
   },
   {
     "key": "ctrl+alt+d",
-    "command": "sticky-selection.exitStickySelectionModeWhilePreservingSelection",
+    "command": "sticky-selection.exitStickySelectionModePreserving",
     "args": {
       "command": "editor.action.selectHighlights",
       "delay": 100
@@ -115,7 +115,7 @@
   },
   {
     "key": "shift+cmd+l",
-    "command": "sticky-selection.exitStickySelectionModeWhilePreservingSelection",
+    "command": "sticky-selection.exitStickySelectionModePreserving",
     "args": {
       "command": "editor.action.selectHighlights",
       "delay": 100
