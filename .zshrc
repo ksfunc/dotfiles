@@ -3,6 +3,10 @@ if type "asdf" > /dev/null 2>&1; then
   . ~/.asdf/plugins/java/set-java-home.zsh
 fi
 
+if [ -f ~/.fzf.zsh ]; then
+  . ~/.fzf.zsh
+fi
+
 if [ -f ~/google-cloud-sdk/path.zsh.inc ]; then
   # The next line updates PATH for the Google Cloud SDK.
   . ~/google-cloud-sdk/path.zsh.inc

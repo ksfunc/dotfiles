@@ -18,6 +18,7 @@
   "workbench.startupEditor": "none",
   "terminal.integrated.scrollback": 5000,
   "git.autofetch": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
   "prettier.printWidth": 120,
   "[rust]": { "editor.defaultFormatter": "rust-lang.rust-analyzer" },
   "[toml]": { "editor.defaultFormatter": "tamasfe.even-better-toml" },
@@ -27,6 +28,5 @@
   "[dart]": { "editor.defaultFormatter": "Dart-Code.dart-code" },
   "[elixir]": { "editor.defaultFormatter": "JakeBecker.elixir-ls" },
   "[terraform]": { "editor.defaultFormatter": "hashicorp.terraform" },
-  "[terraform-vars]": { "editor.defaultFormatter": "hashicorp.terraform" },
-  "gitlens.plusFeatures.enabled": false
+  "[terraform-vars]": { "editor.defaultFormatter": "hashicorp.terraform" }
 }
