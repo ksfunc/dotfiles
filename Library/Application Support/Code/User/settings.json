@@ -3,14 +3,10 @@
   "editor.cursorStyle": "block",
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "all",
-  "editor.renderControlCharacters": true,
-  "editor.suggestSelection": "first",
-  "editor.inlineSuggest.enabled": true,
-  "editor.inlayHints.enabled": "off",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnType": true,
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "diffEditor.ignoreTrimWhitespace": false,
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
@@ -20,13 +16,49 @@
   "git.autofetch": true,
   "github.copilot.nextEditSuggestions.enabled": true,
   "prettier.printWidth": 120,
-  "[rust]": { "editor.defaultFormatter": "rust-lang.rust-analyzer" },
-  "[toml]": { "editor.defaultFormatter": "tamasfe.even-better-toml" },
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    "editor.inlayHints.enabled": "off"
+  },
+  "[toml]": {
+    "editor.defaultFormatter": "tamasfe.even-better-toml"
+  },
   "evenBetterToml.formatter.columnWidth": 120,
-  "[java]": { "editor.defaultFormatter": "redhat.java" },
-  "[scala]": { "editor.defaultFormatter": "scalameta.metals" },
-  "[dart]": { "editor.defaultFormatter": "Dart-Code.dart-code" },
-  "[elixir]": { "editor.defaultFormatter": "JakeBecker.elixir-ls" },
-  "[terraform]": { "editor.defaultFormatter": "hashicorp.terraform" },
-  "[terraform-vars]": { "editor.defaultFormatter": "hashicorp.terraform" }
+  "[java]": {
+    "editor.defaultFormatter": "redhat.java"
+  },
+  "[scala]": {
+    "editor.defaultFormatter": "scalameta.metals"
+  },
+  "[dart]": {
+    "editor.defaultFormatter": "Dart-Code.dart-code"
+  },
+  "[elixir]": {
+    "editor.defaultFormatter": "JakeBecker.elixir-ls"
+  },
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform"
+  },
+  "[terraform-vars]": {
+    "editor.defaultFormatter": "hashicorp.terraform"
+  },
+  "mcp": {
+    "inputs": [
+      {
+        "type": "promptString",
+        "id": "github_token",
+        "description": "GitHub Personal Access Token",
+        "password": true
+      }
+    ],
+    "servers": {
+      "github": {
+        "command": "docker",
+        "args": ["run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"],
+        "env": {
+          "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github_token}"
+        }
+      }
+    }
+  }
 }
