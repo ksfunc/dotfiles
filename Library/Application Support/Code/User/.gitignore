@@ -1,6 +1,3 @@
-globalStorage/
-History/
-mcp/
-snippets/
-workspaceStorage/
-mcp.json
+*
+!keybindings.json
+!settings.json
