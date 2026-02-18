@@ -19,6 +19,7 @@
     "markdown": true
   },
   "github.copilot.nextEditSuggestions.enabled": true,
+  "claudeCode.preferredLocation": "sidebar",
   "prettier.printWidth": 120,
   "[rust]": {
     "editor.defaultFormatter": "rust-lang.rust-analyzer",

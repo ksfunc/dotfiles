@@ -1,7 +1,4 @@
-if type "asdf" > /dev/null 2>&1; then
-  . "$(brew --prefix asdf)/libexec/asdf.sh"
-  . ~/.asdf/plugins/java/set-java-home.zsh
-fi
+eval "$(mise activate zsh)"
 
 if [ -f ~/.fzf.zsh ]; then
   . ~/.fzf.zsh
@@ -27,3 +24,7 @@ bindkey "^[[B" history-beginning-search-forward
 autoload -Uz colors && colors
 
 PROMPT="%n@%m:%F{cyan}%c%f %# "
+
+if [ -f ~/.zshrc.local ]; then
+  . ~/.zshrc.local
+fi
